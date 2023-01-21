@@ -5,33 +5,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:site_name" content="Learning To Search in Task and Motion Planning with Streams">
-    <meta property="og:title" content="Learning To Search in Task and Motion Planning with Streams">
+    <meta property="og:site_name" content="RVL: Learning To Search in Task and Motion Planning">
+    <meta property="og:title" content="RVL: Learning To Search in Task and Motion Planning">
     <meta property="og:description"
-        content="Learning to predict the relevance of optimistic quantities in a Task and Motion Planning Problem.">
+        content="Learning to search in task and motion planning for robotic manipulation problems.">
     <meta property="og:url" content="https://rvl.cs.toronto.edu/learning-based-tamp">
-    <meta property="og:image" content="https://rvl.cs.toronto.edu/learning-based-tamp/teaser.jpg">
-    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image" content="https://rvl.cs.toronto.edu/learning-based-tamp/teaser.png">
+    <meta property="og:image:type" content="image/png">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Learning To Search in Task and Motion Planning with Streams">
+    <meta name="twitter:title" content="RVL: Learning To Search in Task and Motion Planning">
     <meta name="twitter:description"
         content="Learning to predict the relevance of optimistic quantities in a Task and Motion Planning Problem.">
     <meta name="twitter:creator" content="@eric_heiden">
     <meta name="twitter:url" content="https://rvl.cs.toronto.edu/learning-based-tamp">
-    <meta name="twitter:image:src" content="https://rvl.cs.toronto.edu/learning-based-tamp/teaser.jpg">
+    <meta name="twitter:image:src" content="https://rvl.cs.toronto.edu/learning-based-tamp/teaser.png">
 
     <meta name="description"
-        content="Learning to predict the relevance of optimistic quantities in a Task and Motion Planning Problem.">
-    <meta name="author" content="Mohamed Khodeir, Ben Agro, Florian Shkurti">
+        content="Learning to search in task and motion planning for robotic manipulation problems.">
+    <meta name="author" content="Mohamed Khodeir, Ben Agro, Atharv Sonwane, Florian Shkurti">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
 
     <link rel="icon" type="image/png" href="https://rvl.cs.toronto.edu/learning-based-tamp/favicon.ico"/>
-    <link rel="icon" type="image/png" href="https://rvl.cs.toronto.edu/learning-based-tamp/favicon.ico"/>
-    <title>Learning To Search in Task and Motion Planning with Streams</title>
+    <title>Learning To Search in Task and Motion Planning</title>
 
     <style>
         div.authors p:first-of-type {
@@ -87,6 +86,7 @@
         }
 
         .btn {
+            margin: 10px;
             width: 75%;
         }
 
@@ -123,7 +123,7 @@
     <div id="ral">
     <div class="container">
 
-        <h1>Learning to Search in Task and Motion Planning with Streams</h1>
+        <h2>Learning to Search in Task and Motion Planning with Streams</h2 >
 
         <div class="row authors justify-content-md-center">
             <div class="col-md-auto">
@@ -155,22 +155,26 @@
 
     <div class="container" id="abstract">
         <div class="row">
-            <h2>Abstract</h2>
+            <div class="col-md-3 hidden-xs"><img style="max-width:100%;"src="https://rvl.cs.toronto.edu//assets/publication-thumbnails/ral23-learning-to-search.png" /></div>
+
+            <!-- <h2>Abstract</h2> -->
             <!-- <p class="col-sm-10 fs-5"> -->
-            <p class="col">
+            <div class="col">
+                <div class="row">
+                <div class="col">
                 Task and motion planning problems in robotics combine symbolic planning over discrete task variables with motion optimization over continuous state and action variables. Recent works such as PDDLStream have focused on optimistic planning with an incrementally growing set of objects until a feasible trajectory is found. However, this set is exhaustively expanded in a breadth-first manner, regardless of the logical and geometric structure of the problem at hand, which makes long-horizon reasoning with large numbers of objects prohibitively time-consuming. To address this issue, we propose a geometrically informed symbolic planner that expands the set of objects and facts in a best-first manner, prioritized by a Graph Neural Network that is learned from prior search computations. We evaluate our approach on a diverse set of problems and demonstrate an improved ability to plan in difficult scenarios. We also apply our algorithm on a 7DOF robotic arm in block-stacking manipulation tasks.
-            </p>
+                </div></div>
+                <div class="row actions justify-content-center">
+                    <div class="col-md-3 centertext"><a href="https://arxiv.org/abs/2111.13144" target="_blank"
+                            class="btn btn-primary ">Paper</a></div>
+                    <div class="col-md-3 centertext"><a href="https://github.com/rvl-lab-utoronto/drake-tamp" class="btn btn-primary">Code</a></div>
+                    <div class="col-md-3 centertext"><a href="#" data-bs-toggle="modal" data-bs-target="#citationModal"
+                            class="btn btn-primary">Citation</a></div>
+                </div>
+            </div>
         </div>
 
-        <div class="row actions justify-content-center">
-            <div class="col-md-3 centertext"><a href="https://arxiv.org/abs/2111.13144" target="_blank"
-                    class="btn btn-primary ">Paper</a></div>
-            <div class="col-md-3 centertext"><a href="https://rvl.cs.toronto.edu/learning-based-tamp/supplementary.pdf" target="_blank"
-                    class="btn btn-primary ">Supplementary Materials</a></div>
-            <div class="col-md-3 centertext"><a href="https://github.com/rvl-lab-utoronto/drake-tamp" class="btn btn-primary">Code</a></div>
-            <div class="col-md-3 centertext"><a href="#" data-bs-toggle="modal" data-bs-target="#citationModal"
-                    class="btn btn-primary">Citation</a></div>
-        </div>
+
     </div>
 
     <div class="modal fade" id="citationModal" tabindex="-1" role="dialog" aria-labelledby="citationModalTitle">
@@ -206,6 +210,112 @@
             </div>
         </div>
     </div>
+</div>
+<hr />
+<div id="icra">
+    <div class="container">
+
+        <h2>Policy-Guided Lazy Search with Feedback for Task and Motion Planning</h2>
+
+        <div class="row authors justify-content-md-center">
+            <div class="col-md-auto">
+                <p>
+                    <a href="https://khodeir.github.io">Mohamed Khodeir</a><sup>1,2,*</sup>
+                </p>
+            </div>
+            <div class="col-md-auto">
+                <p>
+                    <a href="https://benagro314.github.io">Atharv Sonwane</a><sup>3</sup>
+                </p>
+            </div>
+            <div class="col-md-auto">
+                <p>
+                    <a href="https://www.cs.toronto.edu/~florian/">Florian Shkurti</a><sup>1,2</sup>
+                </p>
+            </div>
+        </div>
+        <div class="row affiliations justify-content-md-center">
+            <div class="col-md-auto">
+                <p><a href="https://rvl.cs.toronto.edu"><sup>1</sup>Robot Vision and Learning Lab</a></p>
+            </div>
+            <div class="col-md-auto">
+                <p><a href="https://robotics.utoronto.ca"><sup>2</sup>University of Toronto Robotics Institute</a></p>
+            </div>
+            <div class="col-md-auto">
+                <p><a href="https://www.bits-pilani.ac.in"><sup>3</sup>BITS Pilani</a></p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container" id="abstract">
+        <div class="row">
+            <div class="col-md-3 hidden-xs"><img style="max-width:100%;"src="https://rvl.cs.toronto.edu//assets/publication-thumbnails/icra23-policy-guided-tamp.png" /></div>
+            <div class="col">
+                <div class="row">
+                    <p class="col">
+                        PDDLStream solvers have recently emerged as viable solutions for Task and Motion Planning (TAMP) problems, extending PDDL to problems with continuous action spaces. Prior work has shown how PDDLStream problems can be reduced to a sequence of PDDL planning problems, which can then be solved using off-the-shelf planners. However, this approach can suffer from long runtimes. In this paper we propose LAZY, a solver for PDDLStream problems that maintains a single integrated search over action skeletons, which gets progressively more geometrically informed as samples of possible motions are lazily drawn during motion planning. We explore how learned models of goal-directed policies and current motion sampling data can be incorporated in LAZY to adaptively guide the task planner. We show that this leads to significant speed-ups in the search for a feasible solution evaluated over unseen test environments of varying numbers of objects, goals, and initial conditions. We evaluate our TAMP approach by comparing to existing solvers for PDDLStream problems on a range of simulated 7DoF rearrangement/manipulation problems.
+                    </p>
+                </div>
+
+                <div class="row actions justify-content-center">
+                    <div class="col-md-4 centertext"><a href="https://arxiv.org/abs/2210.14055" target="_blank"
+                            class="btn btn-primary ">Paper</a></div>
+                    <div class="col-md-4 centertext"><a href="https://github.com/rvl-lab-utoronto/policy-guided-lazy-tamp" class="btn btn-primary">Code</a></div>
+                    <div class="col-md-4 centertext"><a href="#" data-bs-toggle="modal" data-bs-target="#citationModal"
+                            class="btn btn-primary">Citation</a></div>
+                </div>
+        
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="modal fade" id="citationModal" tabindex="-1" role="dialog" aria-labelledby="citationModalTitle">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="citationModalLongTitle">Citation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <pre>
+@misc{https://doi.org/10.48550/arxiv.2210.14055,
+    doi = {10.48550/ARXIV.2210.14055},
+    
+    url = {https://arxiv.org/abs/2210.14055},
+    
+    author = {Khodeir, Mohamed and Sonwane, Atharv and Shkurti, Florian},
+    
+    keywords = {Robotics (cs.RO), Artificial Intelligence (cs.AI), FOS: Computer and information sciences, FOS: Computer and information sciences},
+    
+    title = {Policy-Guided Lazy Search with Feedback for Task and Motion Planning},
+    
+    publisher = {arXiv},
+    
+    year = {2022},
+    
+    copyright = {Creative Commons Attribution 4.0 International}
+    }
+                          
+                  </pre>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- <div class="container" id="video">
+        <div class="row justify-content-center">
+            <div class="ratio ratio-16x9 w-75">
+                <iframe src="https://www.youtube.com/embed/pzzpR4wh_Zk" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+        </div>
+    </div> -->
 </div>
 
 
