@@ -120,68 +120,70 @@
 <body>
 
     <div class="navbar-flex horizontal-padding max-width-home"><div style="width: 250px;"><a href="#/"><img alt="RVL" class="rvl-icon-desktop" src="https://rvl-lab-utoronto.github.io/static/media/RVL-icon.0d20c34a.png"></a></div></div>
-    <div id="ral">
-    <div class="container">
-
-        <h2>Learning to Search in Task and Motion Planning with Streams</h2 >
-
-        <div class="row authors justify-content-md-center">
-            <div class="col-md-auto">
-                <p>
-                    <a href="https://khodeir.github.io">Mohamed Khodeir</a><sup>1,2,*</sup>
-                </p>
-            </div>
-            <div class="col-md-auto">
-                <p>
-                    <a href="https://benagro314.github.io">Ben Agro</a><sup>1,2</sup>
-                </p>
-            </div>
-            <div class="col-md-auto">
-                <p>
-                    <a href="https://www.cs.toronto.edu/~florian/">Florian Shkurti</a><sup>1,2</sup>
-                </p>
-            </div>
-        </div>
-        <div class="row affiliations justify-content-md-center">
-            <div class="col-md-auto">
-                <p><a href="https://rvl.cs.toronto.edu"><sup>1</sup>Robot Vision and Learning Lab</a></p>
-            </div>
-            <div class="col-md-auto">
-                <p><a href="https://robotics.utoronto.ca"><sup>2</sup>University of Toronto Robotics Institute</a></p>
-            </div>
-
-        </div>
-    </div>
-
-    <div class="container" id="abstract">
+    <hr />
+    <div class="container" id="ral">
         <div class="row">
-            <div class="col-md-3 hidden-xs"><img style="max-width:100%;"src="https://rvl.cs.toronto.edu//assets/publication-thumbnails/ral23-learning-to-search.png" /></div>
-
             <!-- <h2>Abstract</h2> -->
             <!-- <p class="col-sm-10 fs-5"> -->
             <div class="col">
+                <h2>Learning to Search in Task and Motion Planning with Streams</h2 >
+
+                    <div class="row authors justify-content-md-center">
+                        <div class="col-md-auto">
+                            <p>
+                                <a href="https://khodeir.github.io">Mohamed Khodeir</a><sup>1,2,*</sup>
+                            </p>
+                        </div>
+                        <div class="col-md-auto">
+                            <p>
+                                <a href="https://benagro314.github.io">Ben Agro</a><sup>1,2</sup>
+                            </p>
+                        </div>
+                        <div class="col-md-auto">
+                            <p>
+                                <a href="https://www.cs.toronto.edu/~florian/">Florian Shkurti</a><sup>1,2</sup>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row affiliations justify-content-md-center">
+                        <div class="col-md-auto">
+                            <p><a href="https://rvl.cs.toronto.edu"><sup>1</sup>Robot Vision and Learning Lab</a></p>
+                        </div>
+                        <div class="col-md-auto">
+                            <p><a href="https://robotics.utoronto.ca"><sup>2</sup>University of Toronto Robotics Institute</a></p>
+                        </div>
+            
+                    </div>
                 <div class="row">
                 <div class="col">
                 Task and motion planning problems in robotics combine symbolic planning over discrete task variables with motion optimization over continuous state and action variables. Recent works such as PDDLStream have focused on optimistic planning with an incrementally growing set of objects until a feasible trajectory is found. However, this set is exhaustively expanded in a breadth-first manner, regardless of the logical and geometric structure of the problem at hand, which makes long-horizon reasoning with large numbers of objects prohibitively time-consuming. To address this issue, we propose a geometrically informed symbolic planner that expands the set of objects and facts in a best-first manner, prioritized by a Graph Neural Network that is learned from prior search computations. We evaluate our approach on a diverse set of problems and demonstrate an improved ability to plan in difficult scenarios. We also apply our algorithm on a 7DOF robotic arm in block-stacking manipulation tasks.
                 </div></div>
                 <div class="row actions justify-content-center">
-                    <div class="col-md-3 centertext"><a href="https://arxiv.org/abs/2111.13144" target="_blank"
+                    <div class="col-md-4 centertext"><a href="https://arxiv.org/abs/2111.13144" target="_blank"
                             class="btn btn-primary ">Paper</a></div>
-                    <div class="col-md-3 centertext"><a href="https://github.com/rvl-lab-utoronto/drake-tamp" class="btn btn-primary">Code</a></div>
-                    <div class="col-md-3 centertext"><a href="#" data-bs-toggle="modal" data-bs-target="#citationModal"
+                    <div class="col-md-4 centertext"><a href="https://github.com/rvl-lab-utoronto/drake-tamp" class="btn btn-primary">Code</a></div>
+                    <div class="col-md-4 centertext"><a href="#" data-bs-toggle="modal" data-bs-target="#ralcitationmodal"
                             class="btn btn-primary">Citation</a></div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="row h-100">
+                    <div class="my-auto ratio ratio-16x9">
+                        <iframe src="https://www.youtube.com/embed/pzzpR4wh_Zk" title="YouTube video player" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </div>
 
 
-    </div>
 
-    <div class="modal fade" id="citationModal" tabindex="-1" role="dialog" aria-labelledby="citationModalTitle">
+    <div class="modal fade" id="ralcitationmodal" tabindex="-1" role="dialog" aria-labelledby="ralcitationmodalTitle">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="citationModalLongTitle">Citation</h5>
+                    <h5 class="modal-title" id="ralcitationmodalLongTitle">Citation</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -199,22 +201,9 @@
             </div>
         </div>
     </div>
-
-
-    <div class="container" id="video">
-        <div class="row justify-content-center">
-            <div class="ratio ratio-16x9 w-75">
-                <iframe src="https://www.youtube.com/embed/pzzpR4wh_Zk" title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-            </div>
-        </div>
-    </div>
 </div>
 <hr />
-<div id="icra">
-    <div class="container">
-
+<div  class="container" id="icra">
         <h2>Policy-Guided Lazy Search with Feedback for Task and Motion Planning</h2>
 
         <div class="row authors justify-content-md-center">
@@ -246,11 +235,10 @@
             </div>
 
         </div>
-    </div>
-
-    <div class="container" id="abstract">
+        <!-- <div class="row justify-content-md-center">
+            <img style="max-width:75%;"src="/policy-diagram.png" />
+        </div> -->
         <div class="row">
-            <div class="col-md-3 hidden-xs"><img style="max-width:100%;"src="https://rvl.cs.toronto.edu//assets/publication-thumbnails/icra23-policy-guided-tamp.png" /></div>
             <div class="col">
                 <div class="row">
                     <p class="col">
@@ -262,7 +250,7 @@
                     <div class="col-md-4 centertext"><a href="https://arxiv.org/abs/2210.14055" target="_blank"
                             class="btn btn-primary ">Paper</a></div>
                     <div class="col-md-4 centertext"><a href="https://github.com/rvl-lab-utoronto/policy-guided-lazy-tamp" class="btn btn-primary">Code</a></div>
-                    <div class="col-md-4 centertext"><a href="#" data-bs-toggle="modal" data-bs-target="#citationModal"
+                    <div class="col-md-4 centertext"><a href="#" data-bs-toggle="modal" data-bs-target="#icracitationModal"
                             class="btn btn-primary">Citation</a></div>
                 </div>
         
@@ -271,13 +259,12 @@
 
         </div>
 
-    </div>
 
-    <div class="modal fade" id="citationModal" tabindex="-1" role="dialog" aria-labelledby="citationModalTitle">
+    <div class="modal fade" id="icracitationModal" tabindex="-1" role="dialog" aria-labelledby="icracitationModalTitle">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="citationModalLongTitle">Citation</h5>
+                    <h5 class="modal-title" id="icracitationModalLongTitle">Citation</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
