@@ -25,8 +25,7 @@
         content="Learning to search in task and motion planning for robotic manipulation problems.">
     <meta name="author" content="Mohamed Khodeir, Ben Agro, Atharv Sonwane, Florian Shkurti">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
 
     <link rel="icon" type="image/png" href="https://rvl.cs.toronto.edu/learning-based-tamp/favicon.ico"/>
@@ -113,7 +112,31 @@
         margin-right:20px;
         image-rendering: auto;
         }
-          
+
+
+        .bd-example {
+            position: relative;
+            padding: 1rem;
+            margin: 1rem -.75rem 0;
+            border: solid #dee2e6;
+            border-width: 1px 0 0;
+        }
+        @media (min-width: 576px) {
+            .bd-example {
+                padding: 1.5rem;
+                margin-right: 0;
+                margin-left: 0;
+                border-width: 1px;
+                border-top-left-radius: .25rem;
+                border-top-right-radius: .25rem;
+            }
+        }
+        .carousel-item {
+            background-color: black;
+            color: white;
+            text-align: center;
+        }
+
     </style>
 </head>
 
@@ -159,14 +182,16 @@
                 Task and motion planning problems in robotics combine symbolic planning over discrete task variables with motion optimization over continuous state and action variables. Recent works such as PDDLStream have focused on optimistic planning with an incrementally growing set of objects until a feasible trajectory is found. However, this set is exhaustively expanded in a breadth-first manner, regardless of the logical and geometric structure of the problem at hand, which makes long-horizon reasoning with large numbers of objects prohibitively time-consuming. To address this issue, we propose a geometrically informed symbolic planner that expands the set of objects and facts in a best-first manner, prioritized by a Graph Neural Network that is learned from prior search computations. We evaluate our approach on a diverse set of problems and demonstrate an improved ability to plan in difficult scenarios. We also apply our algorithm on a 7DOF robotic arm in block-stacking manipulation tasks.
                 </div></div>
                 <div class="row actions justify-content-center">
-                    <div class="col-md-4 centertext"><a href="https://arxiv.org/abs/2111.13144" target="_blank"
+                    <div class="col-md-4 centertext"><a href="https://ieeexplore.ieee.org/document/10035989" target="_blank"
                             class="btn btn-primary ">Paper</a></div>
                     <div class="col-md-4 centertext"><a href="https://github.com/rvl-lab-utoronto/drake-tamp" class="btn btn-primary">Code</a></div>
                     <div class="col-md-4 centertext"><a href="#" data-bs-toggle="modal" data-bs-target="#ralcitationmodal"
                             class="btn btn-primary">Citation</a></div>
                 </div>
             </div>
-            <div class="col-md-4">
+        </div>
+        <div class="row justify-content-md-center">
+            <div class="bd-example col-md-8">
                 <div class="row h-100">
                     <div class="my-auto ratio ratio-16x9">
                         <iframe src="https://www.youtube.com/embed/pzzpR4wh_Zk" title="YouTube video player" frameborder="0"
@@ -188,14 +213,16 @@
                 </div>
                 <div class="modal-body">
                     <pre>
-@misc{khodeir2021learning,
-      title={Learning to Search in Task and Motion Planning with Streams}, 
-      author={Mohamed Khodeir and Ben Agro and Florian Shkurti},
-      year={2021},
-      eprint={2111.13144},
-      archivePrefix={arXiv},
-      primaryClass={cs.RO}
-}
+@ARTICLE{10035989,
+    author={Khodeir, Mohamed and Agro, Ben and Shkurti, Florian},
+    journal={IEEE Robotics and Automation Letters}, 
+    title={Learning to Search in Task and Motion Planning With Streams}, 
+    year={2023},
+    volume={8},
+    number={4},
+    pages={1983-1990},
+    doi={10.1109/LRA.2023.3242201}}
+                          
                     </pre>
                 </div>
             </div>
@@ -214,7 +241,12 @@
             </div>
             <div class="col-md-auto">
                 <p>
-                    <a href="https://benagro314.github.io">Atharv Sonwane</a><sup>3</sup>
+                    <a href="https://threewisemonkeys-as.github.io">Atharv Sonwane</a><sup>3</sup>
+                </p>
+            </div>
+            <div class="col-md-auto">
+                <p>
+                    <a href="https://ruthrashhari.wixsite.com/ruthrash">Ruthrash Hari</a><sup>2</sup>
                 </p>
             </div>
             <div class="col-md-auto">
@@ -292,8 +324,77 @@
             </div>
         </div>
     </div>
+    <br />
+    <div class="row justify-content-md-center">
 
 
+
+        <div class="bd-example col-md-8">
+            <h4>Dual Arm Manipulation Demos:</h4>
+            <p>To demonstrate the efficacy of the LAZY algorithm in real-world robotic manipulation tasks, we devised a series of TAMP problems that require the cooperation of two 7DoF arms.
+                In this setup, the positions and orientations of objects in the scene are perceived using a Realsense depth camera mounted on the gripper of one of the arms. We then use
+                LAZY to create a plan for achieving arbitrary goals, and execute them completely open-loop.
+            </p>
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+              <!-- <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4" class=""></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4" aria-label="Slide 5" class=""></button>
+              </div> -->
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg> -->
+                  <div class="my-auto ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/9cYZ_etSgZ4" title="Handover Stack" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                  <div class="">
+                    <p>Goal: Stack both blocks on the left. Requires Handover.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg> -->
+                  <div class="my-auto ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/5E99ClUEhFw" title="Obstruction, Block in Pot, Pot on Burner" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>            </div>
+                  <div class="">
+                    <p>Goal: Cook the red object (by placing it in the pot and on the burner).</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                    <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg> -->
+                    <div class="my-auto ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/K8riaP2yISo" title="Dual Arm Stacking" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                    <div class="">
+                      <p>Goal: Stack blocks on the burner in alternating colors. Requires coordination.</p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg> -->
+                    <div class="my-auto ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/Tr-CZ2GfPpo" title="Unstack, Add to Pot, Pot on Burner" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                    <div class="">
+                      <p>Goal: Cook the colored objects (by placing it in the pot and on the burner).</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg> -->
+                    <div class="my-auto ratio ratio-16x9"><iframe src="https://www.youtube.com/embed/cdrKOqx7Udc" title="Consecutive Dual Arm Move" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+                    <div class="">
+                      <p>Goal: Place pot on right, middle and left sides. Requires coordination. </p>
+                    </div>
+                </div>
+                
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            </div>
+    </div>
+
+
+    
     <!-- <div class="container" id="video">
         <div class="row justify-content-center">
             <div class="ratio ratio-16x9 w-75">
@@ -306,9 +407,7 @@
 </div>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 
 </html>
